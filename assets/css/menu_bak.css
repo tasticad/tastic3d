@@ -1,0 +1,163 @@
+
+/**************** TOP (site-title & navbar) ****************/
+.navbar-brand {
+	color: #fff;
+	font-size: 34px;
+	opacity: .9;
+	transition: all 0.33s ease-in 0s;	
+}
+.navbar-brand span {
+	display: inline-block;
+	margin-left: .5em
+}
+.navbar-brand > span:first-child {
+	position: absolute;
+	display: inline-block;
+	color: #f5636c;
+	-moz-transform: scale(-1, 1); 
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+	margin-left: .025em;
+}
+
+.navbar-brand:hover {
+	color: #fff;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.navbar {
+	background-color: rgba(17, 17, 17, 0.4);
+	border-bottom: 1px solid #e8e8e8;
+	padding: 0;
+}
+.navbar.visible {
+	opacity: 1;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.navbar.invisible {
+	transform: translateY(-65px);
+	opacity: 0;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+/*
+.navbar > .container {
+	position: relative; this for this dropdown Hamburger to be under it 
+}
+
+.navbar-nav {
+	position: absolute;
+	margin-top: 85px;
+	margin-right: 15px;
+	right: 0;
+	padding: .2em 0;
+	border-radius: .5em;
+	font-weight: 400;
+	font-size: 21px;
+	text-transform: uppercase;
+	text-align: right;
+	transition: transform 0.5s ease-out, opacity 0.5s linear;
+}
+.navbar-nav.visible {
+	opacity: 1;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.navbar-nav.invisible {
+	opacity: 0;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}*/
+
+/***** Bootstrap resets (for menu) 
+
+.navbar-nav.invisible {
+	transform: translateY(-20px);
+	transition: transform 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+.navbar-nav > li {
+	float: none;
+}
+.navbar-nav > li > a {
+	padding: 0;
+	color: #EEE;
+}
+.navbar-nav.invisible > li > a {
+	padding-bottom: 0;
+	transition: padding-bottom 0.5s ease-out;	
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+	color: #F5626C;
+	text-decoration: none;
+}*****/
+
+/********** Up-right Hamburger menu **********/
+
+.navicon-button {
+	display: inline-block;
+	position: relative;
+	padding: 30px 25px;
+	transition: 0.25s;
+	cursor: pointer;
+	user-select: none;
+	opacity: .8;
+}
+.navicon-button .navicon:before, .navicon-button .navicon:after {
+	transition: 0.25s;
+}
+.navicon-button:hover {
+	transition: 0.5s;
+	opacity: 1;
+}
+.navicon-button:hover .navicon:before, .navicon-button:hover .navicon:after {
+	transition: 0.25s;
+}
+
+.navicon {
+	position: relative;
+	width: 40px;
+	height: 4px;
+	background: white;
+	transition: 0.5s;
+}
+.navicon:before, .navicon:after {
+	display: block;
+	content: "";
+	width: 40px;
+	height: 4px;
+	background: white;
+	position: absolute;
+	z-index: -1;
+	transition: 0.5s 0.25s;
+}
+.navicon:before {
+	top: 13px
+}
+.navicon-button:hover .navicon:before {
+	top: 16px;
+}
+.navicon:after {
+	top: -13px
+}
+.navicon-button:hover .navicon:after {
+	top: -16px;
+}
+
+.open:not(.steps) .navicon:before,
+.open:not(.steps) .navicon:after {
+	top: 0 !important;
+}
+.open .navicon:before,
+.open .navicon:after {
+	transition: 0.5s;
+}
+.open .navicon {
+	background: transparent;
+}
+.open .navicon:before {
+	transform: rotate(-45deg);
+}
+.open .navicon:after {
+	transform: rotate(45deg);
+}

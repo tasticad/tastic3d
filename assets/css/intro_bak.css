@@ -1,0 +1,279 @@
+/******** Intro-video *********/
+
+.color-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(rgba(17,17,17,0) 80%, rgba(17,17,17,1));
+	width: 100%;
+	height: 100vh;
+	z-index: 5;
+}
+
+.intro-video-wrapper {
+	position: relative;
+	width: 100%;
+	/*min-*/height: 100vh;
+	overflow: hidden;
+}
+
+.intro-video { 
+	position: absolute;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	top: 50%;
+	left: 50%;
+	min-width: auto;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+
+/******** Animate TASTICED letters assemble *********/
+
+.intro-title-wrapper {
+	position: absolute;
+	margin: auto;
+	top: 27.5vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/*font-family: "Oswald", open sans, sans-serif;*/
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #e0e0e0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+ul.intro-title {
+    display: inline-block;
+	list-style: outside none none;
+	font-size: 20vh;
+	font-weight: 300;
+	margin-left: .05em;
+	/*width: 100%;*/
+	width: 58vh;
+	margin: auto;
+}
+
+ul.intro-title li {
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+	opacity: 1;
+}
+
+
+ul.intro-title li:nth-child(2) {
+	margin-left: -.25em;
+}
+ul.intro-title li:nth-child(3) {
+	margin-left: -.18em;
+}
+ul.intro-title li:nth-child(4) {
+	margin-left: -.19em;
+}
+ul.intro-title li:nth-child(5) {
+	margin-left: -.21em;
+}
+ul.intro-title li:nth-child(6) {
+	margin-left: -.25em;
+}
+ul.intro-title li:nth-child(7) {
+	margin-left: -.20em;
+	color: #f5636c;
+/** here for inversed letter "E" **/
+	-moz-transform: scale(-1, 1); 
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1); /* */
+}
+ul.intro-title li:nth-child(8) {
+	margin-left: -.27em;
+}
+
+@media only screen and (min-width: 768px) { /* <---------- SMALL DEVICES (Tablets) */
+
+	ul.intro-title {
+		/*font-size: 8.2em;*/
+		font-size: 20vh;
+		margin-left: .05em;
+	}
+
+}
+
+
+/******** Animate appear on Ta *********/
+.intro-title li p.Ta {
+	opacity: 0;
+	transform: translateX(-200px);
+	animation: appearTa ease-out 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearTa { 0%, 10% { opacity:0 } 30%, 100% { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on A *********/
+.intro-title li p.A {
+	opacity: 0;
+	transform: translateX(-150px);
+	animation: appearA 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearA { 0%, 35% { opacity:0 } 60%, 100% { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on S *********/
+.intro-title li p.S {
+	opacity: 0;
+	transform: translateX(-100px);
+	animation: appearS 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearS { 0%, 20% { opacity:0 } 45%, 100% { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on Ti *********/
+.intro-title li p.Ti {
+	opacity: 0;
+	transform: translateX(-50px);
+	animation: appearTi 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearTi { 0%, 15% { opacity:0 } 40%, 100%  { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on I *********/
+.intro-title li p.I {
+	opacity: 0;
+	transform: translateX(50px);
+	animation: appearI 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearI { 0%, 30% { opacity:0 } 55%, 100%  { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on C *********/
+.intro-title li p.C {
+	opacity: 0;
+	transform: translateX(100px);
+	animation: appearC 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearC { 0%, 20% { opacity:0 } 70%, 100%  { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on E *********/
+.intro-title li p.E {
+	opacity: 0;
+	transform: translateX(-150px); /** here change to negative for inversed letter "E" **/
+	animation: appearE 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearE { 0%, 15% { opacity:0 } 85%, 100%  { opacity:1; transform: translateX(0) } }
+
+/******** Animate appear on D *********/
+.intro-title li p.D {
+	opacity: 0;
+	transform: translateX(200px);
+	animation: appearD 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearD { 0%, 25% { opacity:0 } 85%, 100%  { opacity:1; transform: translateX(0) } }
+
+
+/******** Animate Intro-Next *********/
+
+.start {
+	bottom: 0.25em;
+	cursor: pointer;
+	height: 3em;
+	left: 50%;
+	margin-left: -1.05em;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 100%;
+	white-space: nowrap;
+	width: 2.1em;
+	font-size: 2.5em;
+	transform: translateZ(0px);
+	transition: opacity 0.4s ease 0s;
+	animation: pulse 2s ease 0s normal none infinite running;
+	z-index: 10;
+}
+@keyframes pulse {
+	0% { opacity: 0.4; }
+	50% { opacity: 0.9; }
+	100% { opacity: 0.4; }
+}
+
+
+.start::before, .start::after {
+	border-bottom-colors: none;
+	border-left-colors: none;
+	border-right-colors: none;
+	border-top-colors: none;
+	border-color: #fafafa /*#f5636c*/;
+	border-image: none;
+	border-radius: 0 0 0 0.2em;
+	border-style: solid;
+	border-width: 0 0 2.5px 2.5px;
+	content: "";
+	height: 1em;
+	left: 0.5em;
+	position: absolute;
+	top: 0;
+	transform: rotateZ(-45deg);
+	transition: all 0.4s ease 0s;
+	width: 1em;
+}
+.start::after {
+	top: 0.8em;
+	transition-duration: 0.8s;
+}
+.start:hover {
+	animation: 0s ease 0s normal none 1 running none;
+	opacity: 1;
+}
+.start:hover::before, .start:hover::after {
+	transform: rotateY(180deg) rotateZ(-45deg);
+/*  border-color: #f5636c; */
+}
+
+/***
+.icon-start {
+	-moz-osx-font-smoothing: grayscale;
+	font-family: FontAwesome !important;
+	font-style: normal !important;
+	font-variant: normal !important;
+	font-weight: normal !important;
+	line-height: 1;
+	text-transform: none !important;
+}
+.icon-start::before, .icon-start::after { content: "\f107"; }
+.icon-start {
+	position: fixed;
+	user-select: none;
+	font-size: 70px;
+	text-decoration: none;
+	bottom: 0.25em;
+	left: 30%;
+	z-index: 52;
+	color: #fafafa;
+	opacity: .8;
+	text-shadow: none;
+	transition: all 0.4s ease 0s;
+}
+.icon-start:hover::before, .icon-start:hover::after {
+	transform: rotateY(180deg);
+}
+***/

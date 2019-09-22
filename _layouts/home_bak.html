@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	{% include head.html %}
+
+<body>
+
+	{% include navbar_home.html %}
+
+	<section id="intro">
+
+		<div class="intro-video-wrapper">
+
+			<div class="color-overlay"></div>
+
+			<video class="intro-video" autoplay loop muted>
+				<source src="/assets/vids/intro_video3.mp4" type="video/mp4">
+			</video>
+
+			<div class="intro-title-wrapper">
+
+				<ul class="intro-title"> <li><p class="Ta">t</p></li> <li><p class="A">a</p></li> <li><p class="S">s</p></li> <li><p class="Ti">t</p></li> <li><p class="I">i</p></li> <li><p class="C">c</p></li> <li><p class="E">e</p></li> <li><p class="D">d</p></li> </ul>
+				 
+<!--				
+				<ul class="intro-title"> <li><p class="Ta">1</p></li> <li><p class="A">2</p></li> <li><p class="S">3</p></li> <li><p class="Ti">4</p></li> <li><p class="I">5</p></li> <li><p class="C">6</p></li> <li><p class="E">7</p></li> <li><p class="D">8</p></li> </ul>
+				 -->	
+			
+
+			</div>
+		</div>	
+
+			<a class="start page-scroll" href="#blog">Read more</a>
+
+	</section>
+
+	<section id="blog" class="page-content" aria-label="Content">
+		<div class="container">
+<!--
+			<h1 class="page-heading">Posts</h1>
+
+			{{ content }}
+-->
+
+					<ul class="post-list">
+					
+					{% for post in site.posts %}
+
+							<li><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+								{% capture namespace %}{{ post.id | split:"/" | last }}{% endcapture %}
+								<!-- works also with gifs instead of images -->
+								<div class="post-intro">
+									<div class="thumb-art" style="background-image: url('{{ site.url }}{{ post.id | remove: namespace }}thumb.jpg');"></div>
+									<a href="{{ post.url | relative_url }}">
+										<div class="thumb-over" style="background-image: url('{{ site.url }}{{ post.id | remove: namespace }}thumb.jpg');"></div>
+										<div class="thumb-over-layer"><h2>{{ post.title | escape }}</h2></div>
+									</a>
+								</div>
+							</li>
+
+
+					{% endfor %}
+
+					</ul>
+
+			<p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p>
+
+		</div>
+	</section>
+
+	{% include footer_home.html %}
+
+</body>
+</html>

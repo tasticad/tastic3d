@@ -1,0 +1,41 @@
+---
+layout: simple
+---
+
+<div class="container pt-5 pt-lg-0">
+
+	<div class="col-lg-8 offset-lg-2 pl-0 mb-3 pt-0 pt-lg-3">
+		<h2><span class="tag-span">Tag:</span> {{ page.title }}</h2>
+	</div>
+
+
+	{% for post in site.tags[page.tag] %}
+	<div class="row align-items-end no-gutters mb-5">
+
+		<div class="col-lg-8 offset-lg-2">
+			{% capture namespace %}{{ post.id | split:"/" | last }}{% endcapture %}
+			<img class="fit-picture" src="{{ site.url }}{{ post.id | remove: namespace }}{{ post.thumbnail }}" alt="Article thumbnail">
+		</div>
+
+		<!-- Column Right -->
+		<div class="post-meta col-lg-2 pl-0 pl-lg-4">
+			<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+			<h3>{{ post.title | escape }}</h3>
+
+			{% if post.layout %}
+			<a href="{{ post.url | prepend: site.baseurl }}" class="link">
+				<button type="button" class="btn btn-outline-secondary btn-sm mt-2 see-more">See more</button>
+			</a>
+			{% else %}
+			{% for tag in post.tags %}
+				<a href="/tag/{{ tag }}">
+					<button type="button" class="btn btn-outline-secondary btn-sm mt-2">{{ tag }}</button>
+				</a>
+			{% endfor %}
+			{% endif %}
+
+		</div>
+
+	</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,271 @@
+/* @import 'bootstrap/bootstrap.scss'; */
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+	margin: 0;
+	padding: 0; }
+
+/**
+ * Basic styling
+ */
+body {
+	font: 400 16px/1.5 'Open Sans', sans-serif;
+	color: #e0e0e0;
+	background-color: #111;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-feature-settings: "kern" 1;
+	-moz-font-feature-settings: "kern" 1;
+	-o-font-feature-settings: "kern" 1;
+	font-feature-settings: "kern" 1;
+	font-kerning: normal;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+.highlight {
+	margin-bottom: 15px; }
+
+/**
+ * `main` element
+ */
+main {
+	display: block;
+	/* Default value of `display` of `main` element is 'inline' in IE 11. */ }
+
+/**
+ * Images
+ */
+img {
+	max-width: 100%;
+	vertical-align: middle; }
+
+/**
+ * Figures
+ */
+figure > img {
+	display: block; }
+
+figcaption {
+	font-size: 14px; }
+
+/**
+ * Lists
+ */
+ul, ol {
+	margin-left: 30px; }
+
+li > ul,
+li > ol {
+	margin-bottom: 0; }
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400; }
+
+/**
+ * Links
+ */
+a {
+/*	color: #F5626C; */
+	color: #FFF;
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+a:visited {
+	color: #EEE; 
+}
+a:hover, a:focus {
+	color: #F5626C;
+	text-decoration: none; 
+}
+.social-media-list a:hover {
+	text-decoration: none; 
+}
+.social-media-list a:hover .username {
+	text-decoration: underline; 
+}
+button {
+    outline: none !important;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+	color: #828282;
+	border-left: 4px solid #e8e8e8;
+	padding-left: 15px;
+	font-size: 18px;
+	letter-spacing: -1px;
+	font-style: italic; }
+	blockquote > :last-child {
+		margin-bottom: 0; }
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+	font-size: 15px;
+	border: 1px solid #e8e8e8;
+	border-radius: 3px;
+	background-color: #F5626C; /* or 361518 */
+}
+
+code {
+	padding: 1px 5px; }
+
+pre {
+	padding: 8px 12px;
+	overflow-x: auto; }
+	pre > code {
+		border: 0;
+		padding-right: 0;
+		padding-left: 0; }
+
+/**
+ * containers
+*/
+
+.home h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+}
+
+/**
+ * Icons
+ */
+.svg-icon {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	fill: #828282;
+	padding-right: 5px;
+	vertical-align: text-top; }
+
+.social-media-list li + li {
+	padding-top: 5px; }
+
+
+/**
+ * Home page blog posts
+ */
+.post-date, .tag-span {
+	display: inline-block;
+	font-size: 14px;
+	margin: 5px 0;
+	color: #6c757d;
+/*	color: #F5626C; */
+}
+
+.post-meta h3 {
+	margin-bottom: 5px;
+} 
+
+button.see-more {
+	color: #f5636c;
+	border-color: #f5636c;
+}
+button.see-more:hover {
+	color: #111;
+	border-color: #111;
+	background-color: #f5636c;
+}
+
+/**
+ * Post pages
+ */
+.post .container h2 {
+	margin-bottom: 5px;
+}
+.post .container p {
+	margin-top: 1.5rem;
+}
+
+img + em {
+	display: inline-block;
+	font-style: normal;
+	width: 100%;
+	text-align: center;
+	color: #6c757d;
+}
+.youtube-wrapper em {
+	position: absolute;
+	font-style: normal;
+	width: 100%;
+	text-align: center;
+	color: #6c757d;
+	bottom: -1.5rem;
+}
+.youtube-wrapper {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+.youtube-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	}
+
+.page-date {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: #6c757d;
+}
+
+/**
+ * Footer
+ */
+ footer {
+	border-top: 1px solid #e8e8e8;
+ }
+footer > .container {
+	text-align: center;
+}
+footer ul {	
+	width: 100%;
+	margin: 0 auto; /*centrage marges automatiques*/
+	text-align: center; /*centre les inline qu'il contient*/
+}
+footer li {
+	display: inline; /*de list-item à inline*/
+}
+.email .icon {
+	width: 4.8em;
+	height: 4.8em;
+	fill: #fff;
+	opacity: .9;
+	transition: opacity 0.33s ease-in 0s;	
+}
+.email .icon:hover {
+	opacity: 1;
+}
+
+/*
+.email {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+	z-index: 15;
+}
+*/

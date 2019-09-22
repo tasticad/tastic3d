@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	{% include head.html %}
+	
+	<body ondragstart="return false;" ondrop="return false;">
+
+		{% include nav_simple.html %}
+		{% include svg-icons.html %}
+
+		<section class="content">
+
+			{{ content }}
+					
+		</section>
+
+		{% include footer_page.html %}
+		
+	</body>
+</html>

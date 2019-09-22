@@ -1,0 +1,121 @@
+
+/**************** Navbar fade animation ****************/
+
+ @media (max-width: 992px) {
+	.fixed-top {
+		background-color: rgba(17, 17, 17, 0.4);
+		border-bottom: 1px solid #e8e8e8;
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+/*** fade animation ***/
+.fixed-top.visible {
+	opacity: 1;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.fixed-top.invisible {
+	transform: translateY(-65px);
+	opacity: 0;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+/**************** Home + Close icon ****************/
+.home, .close {
+	display: block;
+	float: none;
+	text-align: center;
+	z-index: 15;
+}
+.home .icon, .close .icon {
+	display: block;
+	margin: auto;
+	left: 50%;
+	width: 3.5em;
+	height: 3.5em;
+	fill: #fff;
+	transition: opacity 0.33s ease-in 0s;	
+}
+.home:hover, .close:hover {
+	opacity: .9;
+}
+
+
+/********** Hamburger icon **********/
+.fixed-top div[class^="col-"] {
+	text-align: center;
+}
+
+.navicon-button {
+	display: inline-block;
+	position: relative;
+	padding: 30px 25px;
+	transition: 0.25s;
+	cursor: pointer;
+	user-select: none;
+	opacity: .5;
+}
+.navicon-button .navicon:before, .navicon-button .navicon:after {
+	transition: 0.25s;
+}
+.navicon-button:hover {
+	transition: 0.5s;
+	opacity: .9;
+}
+.navicon-button:hover .navicon:before, .navicon-button:hover .navicon:after {
+	transition: 0.25s;
+}
+
+.navicon {
+	position: relative;
+	width: 45px;
+	height: 6px;
+	background: white;
+	transition: 0.5s;
+}
+.navicon:before, .navicon:after {
+	display: block;
+	content: "";
+	width: 45px;
+	height: 6px;
+	background: white;
+	position: absolute;
+	z-index: -1;
+	transition: 0.5s 0.25s;
+}
+.navicon:before {
+	top: 16px
+}
+.navicon-button:hover .navicon:before {
+	top: 19px;
+}
+.navicon:after {
+	top: -16px
+}
+.navicon-button:hover .navicon:after {
+	top: -19px;
+}
+
+.open:not(.steps) .navicon:before,
+.open:not(.steps) .navicon:after {
+	top: 0 !important;
+}
+.open .navicon:before,
+.open .navicon:after {
+	transition: 0.5s;
+}
+.open .navicon {
+	background: transparent;
+}
+.open .navicon:before {
+	transform: rotate(-45deg);
+}
+.open .navicon:after {
+	transform: rotate(45deg);
+}
+
+.fixed-top .nav-link {
+	padding: 0;
+}
