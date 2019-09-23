@@ -18,7 +18,7 @@ layout: home
 			<span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
 			<h3>{{ post.title | escape }}</h3>
 
-			{% if post.layout %}
+			{% if post.layout != 'blog' %}
 			<a href="{{ post.url | prepend: site.baseurl }}" class="link">
 				<button type="button" class="btn btn-outline-secondary btn-sm mt-2 see-more">See more</button>
 			</a>

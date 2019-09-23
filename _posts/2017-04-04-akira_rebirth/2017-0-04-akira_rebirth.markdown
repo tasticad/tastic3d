@@ -1,4 +1,5 @@
 ---
+layout: blog
 title: "Akira rebirth"
 date: 2017-04-04
 categories: personal
