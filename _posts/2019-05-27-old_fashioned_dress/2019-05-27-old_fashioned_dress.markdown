@@ -2,7 +2,7 @@
 layout: post
 title: "Old fashioned dress"
 date: 2019-05-27
-categories: jekyll update
+categories: work
 thumbnail: thumb.png
 tags: marvelous-designer substance-painter arnold-renderer
 ---

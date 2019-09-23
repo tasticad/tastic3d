@@ -10,7 +10,7 @@ layout: home
 		<!-- Article Image Thumbnail -->
 		<div class="col-lg-8 offset-lg-2">
 			{% capture namespace %}{{ post.id | split:"/" | last }}{% endcapture %}
-			<img class="fit-picture" src="{{ site.url }}{{ post.id | remove: namespace }}{{ post.thumbnail }}" alt="Article thumbnail">
+			<img class="fit-picture" src="{{site.baseurl}}{{ post.id | remove: namespace }}{{ post.thumbnail }}" alt="Article thumbnail">
 		</div>
 
 		<!-- Article Feature Text -->
@@ -24,7 +24,7 @@ layout: home
 			</a>
 			{% else %}
 			{% for tag in post.tags %}
-				<a href="/tag/{{ tag }}">
+				<a href="{{ site.baseurl }}/tag/{{ tag }}">
 					<button type="button" class="btn btn-outline-secondary btn-sm mt-2">{{ tag }}</button>
 				</a>
 			{% endfor %}

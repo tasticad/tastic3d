@@ -2,7 +2,7 @@
 layout: post
 title: "Robot escape"
 date: 2017-11-24
-categories: 3D studies
+categories: study
 thumbnail: thumb.png
 tags: maya arnold-renderer
 ---

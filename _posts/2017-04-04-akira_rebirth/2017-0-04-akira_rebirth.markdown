@@ -1,7 +1,7 @@
 ---
 title: "Akira rebirth"
 date: 2017-04-04
-categories: blog
+categories: personal
 thumbnail: akira.gif
 tags: photoshop after-effects
 ---

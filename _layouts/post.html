@@ -20,7 +20,7 @@
 						{% if page.tags %}
 							{% for tag in page.tags %}
 								<!-- <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}"></a> -->
-								<a href="/tag/{{ tag | slugify }}">
+								<a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
 									<button type="button" class="btn btn-outline-secondary btn-sm">{{ tag }}</button>
 								</a>
 							{% endfor %}
